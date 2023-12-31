@@ -37,7 +37,7 @@ resource "aws_launch_template" "app1_LT" {
     </head>
     <body>
     <div>
-    <h1>Malgus The Destroyer</h1>
+    <h1>Malgus Clan</h1>
     <h1>Continuous War</h1>
     <p><b>Instance Name:</b> $(hostname -f) </p>
     <p><b>Instance Private Ip Address: </b> $local_ipv4</p>
