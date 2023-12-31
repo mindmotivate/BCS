@@ -4,9 +4,9 @@ resource "aws_lb" "app1_alb" {
   load_balancer_type = "application"
   security_groups    = [aws_security_group.app1-443-sg02-LB01.id]
   subnets            = [
-    aws_subnet.public-eu-west-1a.id,
-    aws_subnet.public-eu-west-1b.id,
-    aws_subnet.public-eu-west-1c.id
+    aws_subnet.public-us-east-1a.id,
+    aws_subnet.public-us-east-1b.id,
+    aws_subnet.public-us-east-1c.id
   ]
   enable_deletion_protection = false
 
@@ -31,7 +31,7 @@ resource "aws_lb_listener" "http" {
 }
 
 data "aws_acm_certificate" "cert" {
-  domain   = "balericacloudsec.com"
+  domain   = "malgusclan.com"
   statuses = ["ISSUED"]
   most_recent = true
 }
